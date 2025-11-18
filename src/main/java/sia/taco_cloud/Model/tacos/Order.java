@@ -1,5 +1,6 @@
 package sia.taco_cloud.Model.tacos;
 
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,12 @@ import lombok.Data;
 
 @Data
 public class Order {
+
+  private static final long serialVersionUID = 1L;
+ 
+  private Long id;
+ 
+  private Date placedAt;
   
   @NotBlank(message = "Please enter a delivery name")
   private String deliveryName;
@@ -39,6 +46,8 @@ public class Order {
  
   private List<Taco> tacos = new ArrayList<>();
  
+ //methods 
+
   public void addTaco(Taco taco) {
     tacos.add(taco);
   }

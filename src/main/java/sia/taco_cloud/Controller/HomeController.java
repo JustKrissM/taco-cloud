@@ -1,16 +1,14 @@
 package sia.taco_cloud.Controller;
 
+/*
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+*/
 
 
-
-@Controller
+// Class simplified to view controller in webconfig
 public class HomeController {
     
-    @GetMapping("/")
-    public String home() {
-        return "home.xhtml";
-    }
+    
     
 }

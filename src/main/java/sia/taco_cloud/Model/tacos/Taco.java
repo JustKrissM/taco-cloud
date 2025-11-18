@@ -1,5 +1,6 @@
 package sia.taco_cloud.Model.tacos;
 
+import java.util.Date;
 import java.util.List;
 
 import jakarta.validation.constraints.NotNull;
@@ -16,4 +17,8 @@ public class Taco {
     @NotNull
     @Size(min=1, message = "Your taco must have at least 1 ingredient")
     private List<Ingredient> ingredients;
+
+    private long id;
+
+    private Date createdAt = new Date();
 }
