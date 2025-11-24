@@ -12,7 +12,7 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
-public class Order {
+public class TacoOrder {
 
   private static final long serialVersionUID = 1L;
  

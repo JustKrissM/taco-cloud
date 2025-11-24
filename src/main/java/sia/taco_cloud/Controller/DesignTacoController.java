@@ -15,7 +15,7 @@ import org.springframework.validation.Errors;
 import lombok.extern.slf4j.Slf4j;
 import sia.taco_cloud.Model.tacos.Ingredient;
 import sia.taco_cloud.Model.tacos.Ingredient.Type;
-import sia.taco_cloud.Model.tacos.Order;
+import sia.taco_cloud.Model.tacos.TacoOrder;
 import sia.taco_cloud.Model.tacos.Taco;
 import sia.taco_cloud.Model.tacos.data.IngredientRepository;
 
@@ -60,7 +60,7 @@ public class DesignTacoController {
     }
 
     @PostMapping
-    public String processTaco(@Valid Taco taco, Errors errors, @ModelAttribute Order  order){
+    public String processTaco(@Valid Taco taco, Errors errors, @ModelAttribute TacoOrder  order){
         
         if (errors.hasErrors()) {
             //log.info("Error Processing taco: {}", taco);
@@ -73,8 +73,8 @@ public class DesignTacoController {
    
     
     @ModelAttribute(name = "order")
-    public Order order(){
-        return new Order(); 
+    public TacoOrder order(){
+        return new TacoOrder(); 
     } 
 
     @ModelAttribute(name = "taco")
