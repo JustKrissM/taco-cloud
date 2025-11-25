@@ -1,6 +1,7 @@
 package sia.taco_cloud.Model.tacos;
 
 import java.util.Date;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,12 +16,12 @@ import lombok.Data;
 
 @Data
 @Table
-public class TacoOrder {
+public class TacoOrder  implements Serializable{
   
-  @Id
+  
   private static final long serialVersionUID = 1L;
   
-  
+  @Id
   private Long id;
  
   private Date placedAt;
