@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Slf4j
 @Controller
 @RequestMapping("/design")
-@SessionAttributes("order")
+@SessionAttributes("tacoOrder")
 public class DesignTacoController {
     
 
@@ -72,7 +72,7 @@ public class DesignTacoController {
     }
    
     
-    @ModelAttribute(name = "order")
+    @ModelAttribute(name = "tacoOrder")
     public TacoOrder order(){
         return new TacoOrder(); 
     } 

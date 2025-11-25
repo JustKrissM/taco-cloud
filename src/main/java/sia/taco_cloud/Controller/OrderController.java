@@ -16,7 +16,7 @@ import sia.taco_cloud.Model.tacos.data.OrderRepository;
 @Slf4j
 @Controller
 @RequestMapping("/orders")
-@SessionAttributes("order")
+@SessionAttributes("tacoOrder")
 public class OrderController {
 
   private OrderRepository orderRepo;
@@ -33,7 +33,7 @@ public class OrderController {
   @PostMapping
 public String processOrder( @Valid TacoOrder order, Errors error ,SessionStatus sessionStatus) {
     if (error.hasErrors()) {
-      //log.info("Error Processing order: {} error: {}", order,error);
+      log.info("Error Processing order: {} error: {}", order,error);
       return "orderForm.xhtml";
     }
   log.info("Order submitted: {}", order);
